@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Menu</title>
+   <link rel="stylesheet" href="styles.css">
+   <style>
+      #cart {
+         position: fixed;
+         top: 60px;
+         right: 20px;
+         background: white;
+         border: 2px solid #ff6600;
+         border-radius: 10px;
+         width: 300px;
+         max-height: 400px;
+         overflow-y: auto;
+         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+         padding: 15px;
+         display: none;
+      }
+
+      #cart h3 {
+         margin-top: 0;
+         color: #ff6600;
+      }
+
+      .cart-item {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         border-bottom: 1px solid #eee;
+         padding: 8px 0;
+      }
+
+      .cart-item button {
+         background: red;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         padding: 3px 6px;
+      }
+
+      #viewCartBtn {
+         position: fixed;
+         top: 15px;
+         right: 20px;
+         background: #fff;
+         color: #ff6600;
+         border: 2px solid #ff6600;
+         border-radius: 8px;
+         padding: 8px 12px;
+         cursor: pointer;
+         font-weight: bold;
+      }
+
+      #viewCartBtn:hover {
+         background: #ff6600;
+         color: #fff;
+      }
+   </style>
+</head>
+<body>
+   <header>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Popeyes_logo.svg/1841px-Popeyes_logo.svg.png" alt="Popeyes logo" class="logo">
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="Menu.html">Menu</a></li>
+         <li><a href="About.html">About</a></li>
+         <li><a href="Contact.html">Contact</a></li>
+      </ul>
+   </header>
+
+   <button id="viewCartBtn">View Cart</button>
+
+   <div id="cart">
+      <h3>Your Cart</h3>
+      <div id="cartItems"></div>
+      <p><strong>Total: $<span id="cartTotal">0.00</span></strong></p>
+   </div>
+
+   <div class="item" id="menuItems">
+      <div class="card" food-name="Chicken Sandwich" food-price="5.49">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/f39c9409309e826af31f3fd98164ed50f6d53dfa-2000x1333.png?q=70&auto=format" style="width:100%" class="food">
+         <div class="container">
+            <h4><b>Chicken Sandwich</b></h4> 
+            <p>$5.49</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="3Pc Signature Chicken" food-price="5.00">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/84bbcd43ce0d00ab85cc40e4c23f007e19501d21-2000x1333.png" style="width:100%" class="food">
+         <div class="container">
+            <h4><b>3Pc Signature Chicken</b></h4> 
+            <p>$5.00</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="6Pc Wings" food-price="5.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/65de26f680a1094e1883c3a6b085c02b7f630228-870x570.png?q=70&auto=format" style="width:100%" class="food">
+         <div class="container">
+            <h4><b>6Pc Wings</b></h4> 
+            <p>$5.99</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="3Pc Classic Tenders Combo" food-price="13.79">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/84c9b945bef0be7ecff54f81f81b4f774c3ffe53-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>3Pc Classic Tenders Combo</b></h4> 
+            <p>$13.79</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="1/4 lb. Popcorn Shrimp Comboo" food-price="11.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/f006eb052e18721c933f26854d4367b97718807b-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>1/4 lb. Popcorn Shrimp Combo</b></h4> 
+            <p>$11.99</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="Homestyle Mac & Cheese" food-price="5.49">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/267be3ae1963f7a4b662e569d885c098d2ba9d92-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>Homestyle Mac & Cheese</b></h4> 
+            <p>$5.49</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="Cajun Fries" food-price="3.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_ca/994ad0a5d3fc01e6ee56138e95c60593f42e9354-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>Cajun Fries</b></h4> 
+            <p>$3.99</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="Mashed Potatoes with Cajun Gravy" food-price="3.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/b983b449efae051e4e0ed9a7a3a2938d7a8f6487-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>Mashed Potatoes with Cajun Gravy</b></h4> 
+            <p>$3.99</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="Red Beans & Rice" food-price="3.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/7f50766fa0ee472d0ef658c226d37fc71a368006-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>Red Beans & Rice</b></h4> 
+            <p>$3.99</p> 
+         </div>
+      </div>
+
+      <div class="card" food-name="Coleslaw" food-price="3.99">
+         <img src="https://cdn.sanity.io/images/czqk28jt/prod_plk_us/41b0cf69210596ebf4e05c28800e508af6d31f17-2000x1333.png?w=1134&q=70&fit=max&auto=format" style="width:100%" class = "food">
+         <div class="container">
+            <h4><b>Coleslaw</b></h4> 
+            <p>$3.99</p> 
+         </div>
+      </div>
+   </div>
+
+   <footer class="hours">
+      <p>Business Hours: 10AM-12AM</p>
+      <ul>
+         <li><a href="https://www.instagram.com/popeyes/?hl=en">Instagram</a></li>
+         <li><a href="https://www.facebook.com/Popeyes/">Facebook</a></li>
+         <li><a href="https://x.com/Popeyes">X</a></li>
+      </ul>
+   </footer>
+
+   <script>
+      const cart = [];
+      const cartEl = document.getElementById('cart');
+      const cartItemsEl = document.getElementById('cartItems');
+      const cartTotalEl = document.getElementById('cartTotal');
+      const viewCartBtn = document.getElementById('viewCartBtn');
+
+      viewCartBtn.addEventListener('click', () => {
+         const isHidden = cartEl.style.display === 'none' || cartEl.style.display === '';
+         if (isHidden) {
+            cartEl.style.display = 'block';
+         } else {
+            cartEl.style.display = 'none';
+         }
+      });
+
+      document.querySelectorAll('.card').forEach(card => {
+         card.addEventListener('click', () => {
+            const name = card.getAttribute('food-name');
+            const price = parseFloat(card.getAttribute('food-price'));
+
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+               existing.quantity++;
+            } else {
+               cart.push({ name, price, quantity: 1 });
+            }
+
+            updateCart();
+         });
+      });
+
+      function updateCart() {
+         cartItemsEl.innerHTML = '';
+         let total = 0;
+
+         cart.forEach((item, index) => {
+            total += item.price * item.quantity;
+
+            const div = document.createElement('div');
+            div.classList.add('cart-item');
+            div.innerHTML = `
+               <span>${item.name} x${item.quantity}</span>
+               <span>$${(item.price * item.quantity).toFixed(2)}</span>
+               <button onclick="removeItem(${index})">X</button>
+            `;
+            cartItemsEl.appendChild(div);
+         });
+
+         cartTotalEl.textContent = total.toFixed(2);
+      }
+
+      window.removeItem = function(index) {
+         cart.splice(index, 1);
+         updateCart();
+      };
+   </script>
+</body>
+</html>
